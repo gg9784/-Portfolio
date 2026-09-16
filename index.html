@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Govind Gehlot – Full-Stack Developer & Backend Engineer</title>
+  <meta name="description" content="Govind Gehlot is a Full-Stack Developer and Backend Engineer at IIIT Una, specializing in scalable backend systems, AI-powered applications, and modern full-stack products." />
+  <meta name="keywords" content="Govind Gehlot, Full-Stack Developer, Backend Engineer, IIIT Una, Node.js, React.js, MongoDB, Kafka, Docker, AI" />
+  <meta name="author" content="Govind Gehlot" />
+  <meta property="og:title" content="Govind Gehlot – Full-Stack Developer & Backend Engineer" />
+  <meta property="og:description" content="I build scalable backend systems, AI-powered applications, and modern full-stack products." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">Govind<span class="accent">.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <!-- Hidden file input for resume upload -->
+      <input type="file" id="resume-file-input" accept=".pdf" style="display:none" aria-label="Upload Resume" />
+      <div class="resume-btn-group">
+        <a href="resume.pdf" class="btn btn-outline btn-sm" id="nav-download-btn" download="Govind_Gehlot_Resume.pdf">Download Resume</a>
+        <button class="btn-upload-resume" id="upload-resume-btn" title="Upload your resume PDF" aria-label="Upload Resume">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
+        </button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#experience" class="mobile-link">Experience</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#achievements" class="mobile-link">Achievements</a></li>
+      <li><a href="#education" class="mobile-link">Education</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+      <li>
+        <div class="mobile-resume-btns">
+          <a href="resume.pdf" class="btn btn-primary" id="mobile-download-btn" download="Govind_Gehlot_Resume.pdf">Download Resume</a>
+          <button class="btn btn-outline btn-sm" id="mobile-upload-btn" style="gap:0.4rem">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
+            Upload PDF
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-text fade-in">
+        <p class="hero-greeting"><span class="mono">&gt;_ </span>Hello, World!</p>
+        <h1 class="hero-name">Hi, I'm <span class="accent">Govind Gehlot.</span></h1>
+        <h2 class="hero-role">Full-Stack Developer &amp; Backend Engineer</h2>
+        <p class="hero-desc">I build scalable backend systems, AI-powered applications, and modern full-stack products.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="resume.pdf" class="btn btn-outline" id="hero-download-btn" download="Govind_Gehlot_Resume.pdf">Download Resume</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/gg9784" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://linkedin.com/in/govind-gehlot-98a190286" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:govindgehlot9784@gmail.com" class="social-link" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Email
+          </a>
+        </div>
+        <!-- Currently Building badge -->
+        <div class="hero-stack-badge">
+          <span class="badge-label">Currently building with</span>
+          <div class="badge-chips">
+            <span class="chip">Node.js</span>
+            <span class="chip">React</span>
+            <span class="chip">MongoDB</span>
+            <span class="chip">Kafka</span>
+            <span class="chip">Docker</span>
+            <span class="chip">AI</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual fade-in fade-delay">
+        <div class="code-window">
+          <div class="code-window-header">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="window-title">govind.js</span>
+          </div>
+          <pre class="code-content"><code><span class="kw">const</span> <span class="var">govind</span> = {
+  <span class="key">role</span>: <span class="str">"Backend Engineer"</span>,
+  <span class="key">stack</span>: [
+    <span class="str">"Node.js"</span>, <span class="str">"React"</span>,
+    <span class="str">"MongoDB"</span>, <span class="str">"Kafka"</span>,
+    <span class="str">"Docker"</span>, <span class="str">"PostgreSQL"</span>,
+  ],
+  <span class="key">strengths</span>: [
+    <span class="str">"Scalable APIs"</span>,
+    <span class="str">"Microservices"</span>,
+    <span class="str">"AI Integration"</span>,
+    <span class="str">"DSA (900+ solved)"</span>,
+  ],
+  <span class="key">university</span>: <span class="str">"IIIT Una"</span>,
+  <span class="key">status</span>: <span class="str">"Open to Internships"</span>,
+};</code></pre>
+          <div class="terminal-line">
+            <span class="term-prompt">$</span>
+            <span class="term-text typing-loop"></span>
+            <span class="cursor">|</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label reveal">About</div>
+      <h2 class="section-title reveal">Who I Am</h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I'm <strong>Govind Gehlot</strong>, an Electronics and Communication Engineering undergraduate at <strong>IIIT Una</strong> and a Full-Stack Developer specializing in backend systems and scalable architectures.</p>
+          <p>I design and build <strong>RESTful APIs</strong>, <strong>event-driven microservices</strong>, and <strong>AI-powered web applications</strong>. My core stack revolves around Node.js, Express.js, MongoDB, and Apache Kafka — technologies I've used in real-world production environments.</p>
+          <p>Beyond engineering, I'm a competitive programmer with <strong>900+ DSA problems</strong> solved on LeetCode and GeeksforGeeks. I believe strong fundamentals in algorithms and system design are what distinguish good engineers from great ones.</p>
+        </div>
+        <div class="about-stats reveal">
+          <div class="stat-card">
+            <span class="stat-number">900<span class="accent">+</span></span>
+            <span class="stat-label">DSA Problems Solved</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">3<span class="accent">+</span></span>
+            <span class="stat-label">Production Projects</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">1<span class="accent">+</span></span>
+            <span class="stat-label">Years of Experience</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">700<span class="accent">+</span></span>
+            <span class="stat-label">Users Served</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-label reveal">Experience</div>
+      <h2 class="section-title reveal">Where I've Worked</h2>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="exp-header">
+              <div class="exp-meta">
+                <h3 class="exp-role">Backend Engineer Intern</h3>
+                <span class="exp-company">Trivana Hospitality LLP</span>
+                <span class="exp-location">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Bikaner, Rajasthan
+                </span>
+              </div>
+              <div class="exp-duration">
+                <span class="duration-badge">May 2026 – July 2026</span>
+              </div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Designed scalable RESTful APIs using Node.js and Express.js for core hospitality features following Agile practices.</li>
+              <li>Configured <strong>Apache Kafka</strong> for event-driven microservices, improving throughput and enabling low-latency streaming across distributed services.</li>
+              <li>Optimized MongoDB schemas with targeted indexing to support high availability under concurrent load.</li>
+              <li>Worked on the design, development, and maintenance of backend applications, implementing business logic and integrating RESTful APIs.</li>
+              <li>Optimized application performance and solved complex technical challenges in a distributed environment.</li>
+            </ul>
+            <div class="exp-tech">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express.js</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">Apache Kafka</span>
+              <span class="tech-tag">REST APIs</span>
+              <span class="tech-tag">Git</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Backend Architecture</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-label reveal">Projects</div>
+      <h2 class="section-title reveal">What I've Built</h2>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card reveal" id="project-alumni-connect">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/gg9784/College-Alumni-" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repository" title="GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">Alumni Connect</h3>
+            <p class="project-type">MERN Networking Platform</p>
+            <p class="project-desc">A networking platform connecting students and alumni with mentorship, jobs, real-time chat, and AI-powered assistance.</p>
+            <ul class="project-highlights">
+              <li><span class="highlight-icon">→</span> Architected MERN platform connecting 500+ students &amp; alumni</li>
+              <li><span class="highlight-icon">→</span> Real-time chat via Socket.io with AI chatbot (OpenAI API)</li>
+              <li><span class="highlight-icon">→</span> MongoDB performance improved 30% through strategic indexing</li>
+              <li><span class="highlight-icon">→</span> JWT + RBAC auth, Razorpay payments, job board</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-tag-sm">MongoDB</span>
+              <span class="tech-tag-sm">Express.js</span>
+              <span class="tech-tag-sm">React.js</span>
+              <span class="tech-tag-sm">Node.js</span>
+              <span class="tech-tag-sm">Socket.io</span>
+              <span class="tech-tag-sm">OpenAI API</span>
+              <span class="tech-tag-sm">JWT</span>
+              <span class="tech-tag-sm">Razorpay</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card reveal" id="project-quickai">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/gg9784/UGC-AI-" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repository" title="GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">QuickAI</h3>
+            <p class="project-type">AI SaaS Platform</p>
+            <p class="project-desc">An AI SaaS platform providing image and video generation via a scalable microservices architecture serving 200+ active users.</p>
+            <ul class="project-highlights">
+              <li><span class="highlight-icon">→</span> Served 200+ active users with 99% uptime</li>
+              <li><span class="highlight-icon">→</span> Microservices with PostgreSQL (Neon) — 25% latency reduction</li>
+              <li><span class="highlight-icon">→</span> OAuth via Clerk, Sentry monitoring, CI/CD pipeline</li>
+              <li><span class="highlight-icon">→</span> Deployed via Docker on Hostinger VPS</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-tag-sm">React.js</span>
+              <span class="tech-tag-sm">Node.js</span>
+              <span class="tech-tag-sm">Microservices</span>
+              <span class="tech-tag-sm">PostgreSQL</span>
+              <span class="tech-tag-sm">Clerk</span>
+              <span class="tech-tag-sm">Docker</span>
+              <span class="tech-tag-sm">Sentry</span>
+              <span class="tech-tag-sm">CI/CD</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card reveal" id="project-ecommerce">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/gg9784/Hybrid-E-Commerce" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repository" title="GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">Hybrid MERN E-Commerce</h3>
+            <p class="project-type">Full-Stack E-Commerce Platform</p>
+            <p class="project-desc">A full-stack e-commerce platform with authentication, payments, real-time communication, order tracking, and analytics dashboard.</p>
+            <ul class="project-highlights">
+              <li><span class="highlight-icon">→</span> JWT + RBAC auth, Redux Toolkit — 20% faster UI load</li>
+              <li><span class="highlight-icon">→</span> Stripe payments tested across 100+ transactions</li>
+              <li><span class="highlight-icon">→</span> Live video/chat via WebRTC + Socket.IO (&lt;1s latency)</li>
+              <li><span class="highlight-icon">→</span> Admin analytics dashboard with order tracking</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-tag-sm">MongoDB</span>
+              <span class="tech-tag-sm">Express.js</span>
+              <span class="tech-tag-sm">React.js</span>
+              <span class="tech-tag-sm">Node.js</span>
+              <span class="tech-tag-sm">Redux Toolkit</span>
+              <span class="tech-tag-sm">Stripe</span>
+              <span class="tech-tag-sm">WebRTC</span>
+              <span class="tech-tag-sm">Socket.IO</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-label reveal">Skills</div>
+      <h2 class="section-title reveal">Technical Stack</h2>
+      <div class="skills-grid">
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span>Languages</span>
+          </div>
+          <div class="skill-chips">
+            <span class="skill-chip">C</span>
+            <span class="skill-chip">C++</span>
+            <span class="skill-chip">Python</span>
+            <span class="skill-chip">JavaScript</span>
+            <span class="skill-chip">TypeScript</span>
+            <span class="skill-chip">HTML5</span>
+            <span class="skill-chip">CSS3</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+            <span>Backend</span>
+          </div>
+          <div class="skill-chips">
+            <span class="skill-chip">Node.js</span>
+            <span class="skill-chip">Express.js</span>
+            <span class="skill-chip">RESTful APIs</span>
+            <span class="skill-chip">Microservices</span>
+            <span class="skill-chip">Apache Kafka</span>
+            <span class="skill-chip">System Design</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            <span>Frontend</span>
+          </div>
+          <div class="skill-chips">
+            <span class="skill-chip">React.js</span>
+            <span class="skill-chip">Redux Toolkit</span>
+            <span class="skill-chip">Tailwind CSS</span>
+            <span class="skill-chip">WebSockets</span>
+            <span class="skill-chip">Responsive Design</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            <span>Databases</span>
+          </div>
+          <div class="skill-chips">
+            <span class="skill-chip">MongoDB</span>
+            <span class="skill-chip">PostgreSQL</span>
+            <span class="skill-chip">Redis</span>
+            <span class="skill-chip">Indexing</span>
+            <span class="skill-chip">Query Optimization</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span>Auth &amp; Security</span>
+          </div>
+          <div class="skill-chips">
+            <span class="skill-chip">JWT</span>
+            <span class="skill-chip">OAuth 2.0</span>
+            <span class="skill-chip">Clerk</span>
+            <span class="skill-chip">bcrypt.js</span>
+            <span class="skill-chip">RBAC</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            <span>DevOps &amp; Tools</span>
+          </div>
+          <div class="skill-chips">
+            <span class="skill-chip">Docker</span>
+            <span class="skill-chip">CI/CD</span>
+            <span class="skill-chip">Git</span>
+            <span class="skill-chip">GitHub</span>
+            <span class="skill-chip">Vercel</span>
+            <span class="skill-chip">Hostinger VPS</span>
+            <span class="skill-chip">Sentry</span>
+            <span class="skill-chip">Postman</span>
+            <span class="skill-chip">Agile</span>
+            <span class="skill-chip">Scrum</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal skill-group-wide">
+          <div class="skill-group-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+            <span>Integrations</span>
+          </div>
+          <div class="skill-chips">
+            <span class="skill-chip">Socket.io</span>
+            <span class="skill-chip">WebRTC</span>
+            <span class="skill-chip">Stripe</span>
+            <span class="skill-chip">Razorpay</span>
+            <span class="skill-chip">Cloudinary</span>
+            <span class="skill-chip">OpenAI API</span>
+            <span class="skill-chip">Multer</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS ===== -->
+  <section class="section" id="achievements">
+    <div class="container">
+      <div class="section-label reveal">Achievements</div>
+      <h2 class="section-title reveal">Milestones</h2>
+      <div class="achievements-grid">
+
+        <div class="achievement-card reveal" id="achievement-coding">
+          <div class="achievement-icon coding-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div class="achievement-content">
+            <span class="achievement-badge">2nd Position</span>
+            <h3>Run Code Run 2025</h3>
+            <p>Competitive Programming Contest — IIIT Una</p>
+          </div>
+        </div>
+
+        <div class="achievement-card reveal" id="achievement-dsa">
+          <div class="achievement-icon dsa-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="achievement-content">
+            <span class="achievement-badge">900+ Problems</span>
+            <h3>DSA Mastery</h3>
+            <p>Solved on LeetCode + GeeksforGeeks</p>
+          </div>
+        </div>
+
+        <div class="achievement-card reveal" id="achievement-basketball">
+          <div class="achievement-icon sports-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93C7.24 7.24 12 12 12 12s4.76 4.76 7.07 7.07"/><path d="M19.07 4.93C16.76 7.24 12 12 12 12s-4.76 4.76-7.07 7.07"/><path d="M2 12h20"/><path d="M12 2v20"/></svg>
+          </div>
+          <div class="achievement-content">
+            <span class="achievement-badge">Champion</span>
+            <h3>Basketball Champion</h3>
+            <p>2023, 2025, 2026</p>
+          </div>
+        </div>
+
+        <div class="achievement-card reveal" id="achievement-400m">
+          <div class="achievement-icon gold-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div class="achievement-content">
+            <span class="achievement-badge achievement-gold">Gold Medal</span>
+            <h3>400m Sprint</h3>
+            <p>Athletics — 2024</p>
+          </div>
+        </div>
+
+        <div class="achievement-card reveal" id="achievement-800m">
+          <div class="achievement-icon silver-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div class="achievement-content">
+            <span class="achievement-badge achievement-silver">Silver Medal</span>
+            <h3>800m Run</h3>
+            <p>Athletics — 2025</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section class="section section-alt" id="education">
+    <div class="container">
+      <div class="section-label reveal">Education</div>
+      <h2 class="section-title reveal">Academic Background</h2>
+      <div class="edu-card reveal">
+        <div class="edu-header">
+          <div class="edu-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div class="edu-info">
+            <h3 class="edu-institution">Indian Institute of Information Technology, Una</h3>
+            <p class="edu-degree">B.Tech – Electronics and Communication Engineering</p>
+            <span class="edu-duration">August 2023 – May 2027</span>
+          </div>
+        </div>
+        <div class="edu-coursework">
+          <p class="coursework-title">Relevant Coursework</p>
+          <div class="coursework-chips">
+            <span class="course-chip">Data Structures &amp; Algorithms</span>
+            <span class="course-chip">Machine Learning</span>
+            <span class="course-chip">Deep Learning</span>
+            <span class="course-chip">Operating Systems</span>
+            <span class="course-chip">Computer Networks</span>
+            <span class="course-chip">Linear Algebra</span>
+            <span class="course-chip">Discrete Mathematics</span>
+            <span class="course-chip">Probability &amp; Random Processes</span>
+            <span class="course-chip">Digital Circuits &amp; Systems</span>
+            <span class="course-chip">Microprocessor &amp; Microcontroller</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-inner reveal">
+        <div class="section-label">Contact</div>
+        <h2 class="section-title">Have a project in mind?</h2>
+        <p class="contact-desc">I'm always interested in building interesting products, solving challenging engineering problems, and exploring new technologies.</p>
+        <div class="contact-actions">
+          <a href="mailto:govindgehlot9784@gmail.com" class="btn btn-primary" id="contact-email-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Email Me
+          </a>
+          <a href="https://github.com/gg9784" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="contact-github-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://linkedin.com/in/govind-gehlot-98a190286" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="contact-linkedin-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+        <p class="contact-email">govindgehlot9784@gmail.com</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">Designed &amp; Built by <span class="accent">Govind Gehlot</span></p>
+        <div class="footer-links">
+          <a href="https://github.com/gg9784" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/govind-gehlot-98a190286" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:govindgehlot9784@gmail.com" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
